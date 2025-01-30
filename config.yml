@@ -1,0 +1,20 @@
+module:
+  mounts:
+    - source: assets
+      target: assets
+    - source: content
+      target: content
+    - source: i18n
+      target: i18n
+    - source: layouts
+      target: layouts
+
+# Permalink
+permalinks:
+  jobs_places: /jobs/places/:slug/
+  section: 
+    jobs_places: /jobs/places/
+
+# Set taxonomy
+taxonomies:
+  jobs_place: jobs_places
