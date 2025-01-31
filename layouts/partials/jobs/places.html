@@ -1,0 +1,13 @@
+{{- with .GetTerms "jobs_places" }}
+  {{- $places := slice -}}
+  {{- range . }}
+    {{- $place := partial "func/GetRealPlace" . -}}
+    {{- with $place }}
+      {{- $name := cond .Params.address.city .Params.address.city .Title -}}
+      {{- $places = $places | append (partial "func/PrepareHTML" $name) -}}
+    {{ end -}}
+  {{ end -}}
+  {{- with $places }}
+    <p class="metas-places"><span>{{ delimit . ", "}}</span></p>
+  {{ end -}}
+{{ end -}}

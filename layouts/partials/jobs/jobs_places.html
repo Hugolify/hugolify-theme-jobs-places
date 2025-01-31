@@ -3,11 +3,9 @@
   {{- range . }}
     {{- $place := partial "func/GetRealPlace" . -}}
     {{- with $place }}
-      {{- $name := cond .Params.address.city .Params.address.city .Title -}}
-      {{- $places = $places | append (partial "func/PrepareHTML" $name) -}}
+      <aside class="place" itemscope itemtype="http://schema.org/Place" {{- partial "func/SetAnim" (dict "element" "item") }}>
+        {{ partial "places/item/content-large" . }}
+      </aside>
     {{ end -}}
-  {{ end -}}
-  {{- with $places }}
-    <p class="metas-places"><span>{{ delimit . ", "}}</span></p>
   {{ end -}}
 {{ end -}}
