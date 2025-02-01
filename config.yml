@@ -11,10 +11,11 @@ module:
 
 # Permalink
 permalinks:
-  jobs_places: /jobs/places/:slug/
-  section: 
+  taxonomy: 
     jobs_places: /jobs/places/
-
+  term:
+    jobs_places: /jobs/places/:slug/
+  
 # Set taxonomy
 taxonomies:
   jobs_place: jobs_places
