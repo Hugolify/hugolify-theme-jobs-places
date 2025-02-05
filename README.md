@@ -1,4 +1,4 @@
-# hugolify-themes-jobs-places
+# hugolify-theme-jobs-places
 
 ## Install
 
