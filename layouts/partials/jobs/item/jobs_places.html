@@ -8,6 +8,6 @@
     {{ end -}}
   {{ end -}}
   {{- with $places }}
-    <p class="job-places">{{ delimit . ", "}}</p>
+    <p class="job-places" itemprop="jobLocation" itemscope itemtype="https://schema.org/Place">{{ delimit . ", "}}</p>
   {{ end -}}
 {{ end -}}
