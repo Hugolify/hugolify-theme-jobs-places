@@ -4,7 +4,7 @@
     {{- $place := partial "func/GetRealPlace" . -}}
     {{- with $place }}
       {{- $name := cond (isset .Params.address "city") .Params.address.city .Title -}}
-      {{- $places = $places | append (partial "func/PrepareHTML" $name) -}}
+      {{- $places = $places | append (partial "func/PrepareHTML.html" $name) -}}
     {{ end -}}
   {{ end -}}
   {{- with $places }}

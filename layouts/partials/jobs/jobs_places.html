@@ -3,7 +3,7 @@
   {{- range . }}
     {{- $place := partial "func/GetRealPlace" . -}}
     {{- with $place }}
-      <aside class="place" itemscope itemtype="https://schema.org/Place" {{- partial "func/SetAnim" (dict "element" "item") }}>
+      <aside class="place" itemscope itemtype="https://schema.org/Place" {{- partial "func/SetAnim.html" (dict "element" "item") }}>
         <a href="{{ .Permalink }}" itemprop="url" class="content">
           {{ partial "places/item/company" . }}
           {{ partial "places/item/title" . }}
