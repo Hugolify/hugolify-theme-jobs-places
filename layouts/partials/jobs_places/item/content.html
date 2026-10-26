@@ -1,4 +1,5 @@
-<a href="{{ .Permalink }}" itemprop="url" class="content">
+<a href="{{ .Permalink }}" class="content">
   {{ partial "places/item/title.html" . }}
+  {{ partial "commons/item/result.html" . }}
   {{ partialCached "commons/item/more.html" . }}
 </a>

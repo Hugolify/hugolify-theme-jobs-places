@@ -1,7 +1,7 @@
 {{- with .GetTerms "jobs_places" }}
   {{- $places := slice -}}
   {{- range . }}
-    {{- $place := partial "func/GetRealPlace" . -}}
+    {{- $place := partial "func/GetRealPlace.html" . -}}
     {{- with $place }}
       {{- $name := cond (isset .Params.address "city") .Params.address.city .Title -}}
       {{- $places = $places | append (partial "func/PrepareHTML.html" $name) -}}

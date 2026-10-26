@@ -1,4 +1,3 @@
-<article class="place jobs_place" itemscope itemtype="http://schema.org/Organization"{{ partial "func/SetAnim.html" (dict "element" "item") }}>
-  {{ partial "jobs_places/item/content" . }}
-  {{ partial "jobs_places/item/media" . }}
+<article class="item jobs_place" {{- partial "func/SetAnim.html" (dict "element" "item") }}>
+  {{ partial "jobs_places/item/content.html" . }}
 </article>

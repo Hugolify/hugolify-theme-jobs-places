@@ -1,14 +1,13 @@
 {{- with .GetTerms "jobs_places" }}
-  {{- $places := slice -}}
   {{- range . }}
-    {{- $place := partial "func/GetRealPlace" . -}}
+    {{- $place := partial "func/GetRealPlace.html" . -}}
     {{- with $place }}
-      <aside class="place" itemscope itemtype="https://schema.org/Place" {{- partial "func/SetAnim.html" (dict "element" "item") }}>
-        <a href="{{ .Permalink }}" itemprop="url" class="content">
-          {{ partial "places/item/company" . }}
-          {{ partial "places/item/title" . }}
-          {{ partial "places/item/address" . }}
-          {{ partialCached "commons/item/more" . }}
+      <aside class="item place" {{- partial "func/SetAnim.html" (dict "element" "item") }}>
+        <a href="{{ .Permalink }}" class="content">
+          {{ partial "places/item/company.html" . }}
+          {{ partial "places/item/title.html" . }}
+          {{ partial "places/item/address.html" . }}
+          {{ partialCached "commons/item/more.html" . }}
         </a>
       </aside>
     {{ end -}}
